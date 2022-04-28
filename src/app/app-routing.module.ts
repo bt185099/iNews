@@ -11,8 +11,7 @@ const routes: Routes = [
   {path:'login', component:LoginComponent},
   {path:'signup', component:SignupComponent},
   {path:'bookmarks', component:BookmarksComponent},
-  {path:'home', component:DashboardComponent},
-  {path:'news', component:NewsArticleComponent}
+  {path:'home', component:DashboardComponent}
 ];
 
 @NgModule({
