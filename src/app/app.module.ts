@@ -8,7 +8,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { NewsArticleComponent } from './news-article/news-article.component';
-import { BookmarkComponent } from './bookmark/bookmark.component';
+import { BookmarksComponent } from './bookmarks/bookmarks.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
@@ -22,7 +22,7 @@ import {MatButtonModule} from '@angular/material/button';
     LoginComponent,
     SignupComponent,
     NewsArticleComponent,
-    BookmarkComponent
+    BookmarksComponent
   ],
   imports: [
     BrowserModule,
