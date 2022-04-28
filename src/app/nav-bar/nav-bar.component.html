@@ -1,16 +1,14 @@
-<!-- <mat-toolbar>
-    <span>iNews</span>
-</mat-toolbar> -->
 <p>
-    <mat-toolbar color="primary">
-      <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+  <mat-toolbar color="primary">
+    <div class="logo">
+      <button mat-icon-button class="logo-icon" aria-label="Logo" routerLink="../home">
         <mat-icon>find_in_page</mat-icon>
+        <span class="logo-text">iNews</span>
       </button>
-      <span>iNews</span>
-      <span class="example-spacer"></span>
-      <button mat-icon-button class="example-icon favorite-icon" aria-label="user">
-        <mat-icon>account_circle</mat-icon>
-      </button>
-    </mat-toolbar>
-  </p>
-  
+    </div>
+    <span class="nav-bar-spacer"></span>
+    <button mat-icon-button class="example-icon favorite-icon" aria-label="user" (click)="logout()">
+      <mat-icon>account_circle</mat-icon>
+    </button>
+  </mat-toolbar>
+</p>
