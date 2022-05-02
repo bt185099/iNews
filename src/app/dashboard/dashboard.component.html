@@ -2,14 +2,10 @@
     <section>
     </section>
     <section class="trending-news">
-        <div class="trending-news-list" *ngFor="let number of [0,1,2,3,4]">
-            <news-article></news-article>
-        </div>
+        <mat-grid-list cols="3" >
+            <mat-grid-tile *ngFor="let number of [0,1,2,3,4]">
+                <news-article></news-article>
+            </mat-grid-tile>
+        </mat-grid-list>
     </section>
 </main>
-
-
-<!-- <mat-grid-list cols="1" >
-    <mat-grid-tile>1</mat-grid-tile>
-    <mat-grid-tile>2</mat-grid-tile>
-</mat-grid-list> -->
