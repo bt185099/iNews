@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { LoginService } from '../login.service';
+import { catchError, retry } from 'rxjs';
+import { NewsAPIService } from '../news-api.service';
+import { INewsArticle } from '../misc/interfaces';
 
 @Component({
   selector: 'app-dashboard',
@@ -8,13 +10,22 @@ import { LoginService } from '../login.service';
 })
 export class DashboardComponent implements OnInit {
 
-  constructor(private loginService: LoginService) { }
-  newsArticles: any;
+  constructor(private newsAPIService: NewsAPIService) { }
+  newsArticles: INewsArticle[] = [];
 
   ngOnInit(): void {
-    this.newsArticles = this.loginService.getTrendingNews();
-    console.log(this.newsArticles);
-    
+    this.newsAPIService.getTrendingNews().subscribe(
+      response => {
+        if (response.status === 'ok') {
+          this.newsArticles = response.articles;
+          console.log(this.newsArticles);
+        } else {
+          console.error(response.code, response.message);
+        }
+      }, error => {
+        console.error(error);
+      }
+    );
   }
 
 }
