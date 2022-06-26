@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { LoginService } from './login.service';
+import { NewsAPIService } from './news-api.service';
 
 
 @Component({
@@ -10,7 +10,7 @@ import { LoginService } from './login.service';
 export class AppComponent {
   title: string = 'iNews';
   loginStatus: boolean = true;
-  constructor(loginService: LoginService){
+  constructor(newsAPIService: NewsAPIService){
 
   }
 }
